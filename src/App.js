@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import ReactTable from "react-table"; 
-import 'react-table/react-table.css'
+import ReactTable from "react-table-6";  
+import "react-table-6/react-table.css"
 import data1 from './data.json';
 
 export default class App extends Component {
@@ -21,42 +21,55 @@ export default class App extends Component {
     this.getUsersData()
   }
   render() {
-    const columns = [{
-      Header: "game_pk",
-      accessor: "game_pk"
-    },
+    const columns = [
     {
-      Header: "game_id",
+      Header: "Game ID",
       accessor: "game_id"
     },
     {
-      Header: "away_team_name",
+      Header: "Away Team",
       accessor: "away_team_name"
     },
     {
-      Header: "away_team_code",
-      accessor: "away_team_code"
-    },
-    {
-      Header: "home_team_name",
+      Header: "Home Team",
       accessor: "home_team_name"
     },
     {
-      Header: "home_team_code",
-      accessor: "home_team_code"
+      Header: "Pitcher",
+      accessor: "pitcher_name"
     },
     {
-      Header: "play_id",
-      accessor: "play_id"
+      Header: "Batter",
+      accessor: "batter_name"
     },
     {
-      Header: "sv_pitch_id",
-      accessor: "sv_pitch_id"
+      Header: "Inning",
+      accessor: "inning"
     },
     {
-      Header: "sequence_number",
-      accessor: "sequence_number"
-    }
+      Header: "Inning half",
+      accessor: "inning_half"
+    },
+    {
+      Header: "Balls",
+      accessor: "balls"
+    },
+    {
+      Header: "Strikes",
+      accessor: "strikes"
+    },
+    {
+      Header: "Outs",
+      accessor: "outs"
+    },
+    {
+      Header: "Pitch Type",
+      accessor: "pitch_type"
+    },
+    {
+      Header: "Pitch Name",
+      accessor: "pitch_name"
+    },
   ]
     return (
       <ReactTable  
